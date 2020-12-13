@@ -44,13 +44,14 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder>{
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        private final TextView textViewTitle, textViewStatus;
+        private final TextView textViewTitle, textViewStatus, textViewAuthor;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             textViewTitle = itemView.findViewById(R.id.textViewTitle);
             textViewStatus = itemView.findViewById(R.id.textViewStatus);
+            textViewAuthor = itemView.findViewById(R.id.textViewAuthor);
 
             itemView.setOnClickListener(v -> {
                 NavDirections navDirections = BookListFragmentDirections.actionBookListFragmentToBookInfoFragment().setBook(bookList.get(getAdapterPosition()));
@@ -61,6 +62,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder>{
         public void bind(Book book) {
             textViewTitle.setText(book.getTitle());
             textViewStatus.setText(book.getStatus());
+            textViewAuthor.setText(book.getAuthor());
         }
 
     }

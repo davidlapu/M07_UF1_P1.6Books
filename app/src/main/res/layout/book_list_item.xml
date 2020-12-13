@@ -16,15 +16,21 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Title" />
-<!--
+        tools:text="Title"
+        android:maxEms="7"/>
+
     <TextView
         android:id="@+id/textViewAuthor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="8dp"
-        tools:text="David"/>
--->
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="David"
+        android:maxEms="7"/>
+
 
     <TextView
         android:id="@+id/textViewStatus"
@@ -35,15 +41,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="reading" />
-    <!--
-        <TextView
-            android:id="@+id/textViewScore"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="8dp"
-            tools:text="5"/>
-    -->
-
+        tools:text="Want to read" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

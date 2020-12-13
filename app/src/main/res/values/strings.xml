@@ -6,7 +6,7 @@
     <string name="status">Status: </string>
     <string name="Rating">Rating: </string>
     <string name="confirm">CONFIRM</string>
-    <string name="cancel">CANCEL</string>
+    <string name="cancel">Cancel</string>
     <string-array name="status">
         <item>Want to read</item>
         <item>Reading</item>
@@ -14,4 +14,7 @@
     </string-array>
     <string name="empty_title">Title cannot be empty</string>
     <string name="empty_author">Author cannot be empty</string>
+    <string name="title_list">TITLE</string>
+    <string name="status_list">STATUS</string>
+    <string name="author_list">AUTHOR</string>
 </resources>
