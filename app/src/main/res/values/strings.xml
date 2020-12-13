@@ -7,4 +7,11 @@
     <string name="Rating">Rating: </string>
     <string name="confirm">CONFIRM</string>
     <string name="cancel">CANCEL</string>
+    <string-array name="status">
+        <item>Want to read</item>
+        <item>Reading</item>
+        <item>Read</item>
+    </string-array>
+    <string name="empty_title">Title cannot be empty</string>
+    <string name="empty_author">Author cannot be empty</string>
 </resources>

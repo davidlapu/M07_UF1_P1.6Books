@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -42,6 +43,8 @@ public class BookListFragment extends Fragment {
         recyclerView.setAdapter(bookAdapter);
 
         floatingActionButton = v.findViewById(R.id.floatingActionButton);
+        floatingActionButton.setOnClickListener(v1 ->
+                Navigation.findNavController(v).navigate(R.id.action_bookListFragment_to_bookInfoFragment));
 
         return v;
     }

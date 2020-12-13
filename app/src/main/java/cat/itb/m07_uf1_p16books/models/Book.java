@@ -1,8 +1,11 @@
 package cat.itb.m07_uf1_p16books.models;
 
-public class Book {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Book implements Parcelable {
     private String title, author, status;
-    private int score;
+    private float score;
 
     public Book(String title, String author, String status) {
         this.title = title;
@@ -10,11 +13,34 @@ public class Book {
         this.status = status;
     }
 
-    public Book(String title, String author, String status, int score) {
+    public Book(String title, String author, String status, float score) {
         this.title = title;
         this.author = author;
         this.status = status;
         this.score = score;
+    }
+
+    protected Book(Parcel in) {
+        title = in.readString();
+        author = in.readString();
+        status = in.readString();
+        score = in.readFloat();
+    }
+
+    public static final Creator<Book> CREATOR = new Creator<Book>() {
+        @Override
+        public Book createFromParcel(Parcel in) {
+            return new Book(in);
+        }
+
+        @Override
+        public Book[] newArray(int size) {
+            return new Book[size];
+        }
+    };
+
+    public Book() {
+
     }
 
     public String getTitle() {
@@ -41,11 +67,24 @@ public class Book {
         this.status = status;
     }
 
-    public int getScore() {
+    public float getScore() {
         return score;
     }
 
-    public void setScore(int score) {
+    public void setScore(float score) {
         this.score = score;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(title);
+        dest.writeString(author);
+        dest.writeString(status);
+        dest.writeFloat(score);
     }
 }
